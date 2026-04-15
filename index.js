@@ -1,14 +1,14 @@
 function combineUsers(...args) {
 
   const combinedObject = {users: []};
-  for (const arg of args) {
-    if (Array.isArray(arg)) {
-      combinedObject.push(...arg);
+  for (const arr of args) {
+    if (Array.isArray(arr)) {
+      combinedObject.users.push(...arr);
     }
   }
 
-  CombinedObject.merge_date = Date.today().toString("M/d/yyyy");
-  return {combinedObject};
+  combinedObject.merge_date = Date.today().toString("M/d/yyyy");
+  return combinedObject;
 }
 
 
